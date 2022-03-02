@@ -12,10 +12,5 @@ export default function generatorHtml(aCharacter){
  </span>
 </div>   
  </div>`
-}
 
-/***** ver cómo generar la función del menú****
- 
-export function menuNav(){.......
- return ..........
-}*/
+}

@@ -48,6 +48,16 @@ export const speciesOrder = (resultsData, specie) => {
   return resultsSpecies;
 }
 
+
+export const computeFemale = (resultsData) => {
+  let femaleResults = []
+  femaleResults = femaleOrder(resultsData)
+  return femaleResults.length * 100 / resultsData.length;
+}
+
+
+
+
 //Claculo del top 10 personajes que salen en la serie
 
 /*export const relevanceOrder = (resultsData) => {
@@ -58,6 +68,8 @@ export const speciesOrder = (resultsData, specie) => {
 export const relevanceOrder = (resultsData) => resultsData.sort((character1, character2) => {
   return (character2.episode.length - character1.episode.length);// de mayor a menor top ten
 });
+
+
 
 
 
