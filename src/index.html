@@ -8,11 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
  
-  <!---------------------JQUERY TEST------------------------------------->
   <!--------------------JQUERY TEST DOWN--------------------------------->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!------------------JQUERY TEST UP------------------------------------->
-  <!---------------------JQUERY TEST------------------------------------->
+  
   
 </head>
 
@@ -50,7 +48,8 @@
         <li class="list" id="femaleOrder">FEMALE</li>
         <li class="list" id="top10order">TOP TEN </li>
         <label>SPECIES
-          <select id="speciesBox">
+          <select name ="Species" id="speciesBox">
+            <option selected disabled> Choose </option>
             <option value="Human">Human</option>
             <option value="Robot">Robot</option>
             <option value="Humanoid">Humanoid</option>
@@ -89,10 +88,13 @@
     <aside>
       <div id="asideRightCompute" class="asideRightCompute">
         <h2 id="hideDog">LOOK AT ME, YOU SON OF A ****!</h2>
-        <img src="/assets/rick-and-morty-lawnmower-dog.png" alt="sticker dog" id="dogCompute">
+        <img src="/assets/rick-and-morty-lawnmower-dog.png" alt="sticker dog" id="dogCompute"  height="110px" >
         <div id="computeFemale"></div>
       </div>
     </aside>
+
+    <!--------BOTÓN UP----------->
+    <button id="myBtn">&#8593</button>
 
     <!----------------------------------TARJETAS DE DATA (MODULAR)--------------------------------------------->
     <div id="allCards" class="allCards"></div>
@@ -105,7 +107,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     <div>
       <canvas width="200" height="200" id="topTenChart"></canvas>
-
     </div>
   </section>
 </body>

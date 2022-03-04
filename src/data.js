@@ -1,19 +1,19 @@
 //****************DECLARAMOS FUNCIONES PARA LAS SECCIONES******/
-//ordenado alfabético 
+//Orden alfabético 
 export const alphabeticOrder = (resultsData) => {
   return [].slice.call(resultsData).sort((character1, character2) => {
     return (character1.name < character2.name) ? -1 : 1; //algoritmo de ordenamiento
   });
 };
 
-//ordenado alfabético de regreso
+//Orden alfabético de regreso
 export const alphabeticOrderBack = (resultsData) => {
   return [].slice.call(resultsData).sort((character1, character2) => {
     return (character1.name > character2.name) ? -1 : 1; //algoritmo de ordenamiento
   });
 };
 
-// ordenado hombres
+// Orden hombres
 export const maleOrder = (resultsData) => {
   const resultsMale = []
   for (let i = 0; i < resultsData.length; i++) {   //recorrer lista de datos
@@ -25,7 +25,7 @@ export const maleOrder = (resultsData) => {
 }
 
 
-//ordenado mujeres
+//Orden mujeres
 export const femaleOrder = (resultsData) => {
   const resultsFemale = []
   for (let i = 0; i < resultsData.length; i++) {
@@ -37,7 +37,7 @@ export const femaleOrder = (resultsData) => {
 }
 
 
-//ordenado especies
+//Orden especies
 export const speciesOrder = (resultsData, specie) => {
   const resultsSpecies = []
   for (let i = 0; i < resultsData.length; i++) {
@@ -48,6 +48,7 @@ export const speciesOrder = (resultsData, specie) => {
   return resultsSpecies;
 }
 
+//Cálculo género de personajes
 
 export const computeFemale = (resultsData) => {
   let femaleResults = []
@@ -56,17 +57,11 @@ export const computeFemale = (resultsData) => {
 }
 
 
+//Cálculo del top 10 personajes que salen en la serie
 
 
-//Claculo del top 10 personajes que salen en la serie
-
-/*export const relevanceOrder = (resultsData) => {
-  return [].slice.call(resultsData).sort((character1, character2) => {
-    return (character2.episode.length - character1.episode.length) ? -1 : 1;// de mayor a menor top ten
-  });
-};*/
 export const relevanceOrder = (resultsData) => resultsData.sort((character1, character2) => {
-  return (character2.episode.length - character1.episode.length);// de mayor a menor top ten
+  return (character2.episode.length - character1.episode.length);
 });
 
 

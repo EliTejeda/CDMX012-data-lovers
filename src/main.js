@@ -111,17 +111,27 @@ function backSite() {
 
 document.getElementById("portalBackHome").onclick = function () { backSite() };
 
+
+//****BOTÓN UP ********/
+
+let buttonUp = document.getElementById("myBtn");
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        buttonUp.style.display = "block";
+    } else {
+        buttonUp.style.display = "none";
+    }
+};
+
+buttonUp.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
+
 //***** SECCION DE CÁLCULOS***//
 
-/*const genderAll = resultsData.map(item => item.name);
-let genderResults = genderAll.length;
-
-const allFemale = resultsData.filter(function (element) {
-    return element.gender === "Female";
-});*/
-
-/*let femaleTotal = allFemale.length
-let femalePercent = 100 * femaleTotal / genderResults;*/
 let femalePercent = computeFemale(resultsData);
 document.getElementById("computeFemale").innerHTML = `Did you know that ${parseInt(femalePercent)}% of the characters are female?`;
 
