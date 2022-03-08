@@ -138,9 +138,6 @@ let femalePercent = computeFemale(resultsData);
 document.getElementById("computeFemale").innerHTML = `Did you know that ${parseInt(femalePercent)}% of the characters are female?`;
 
 
-
-
-
 //***** SECCION DE TOP TEN CHART*/
 
 let top10orderLi = document.getElementById("top10order")
@@ -154,7 +151,7 @@ top10orderLi.addEventListener("click", (event) => { // eslint-disable-line
     }
     let topTenChart = document.getElementById("topTenChart")
     const topTenChartResults = new Chart(topTenChart, { // eslint-disable-line
-        type: "bar",
+        type: "pie",
         data: {
             labels: namesChart,
             datasets: [{
@@ -174,13 +171,16 @@ top10orderLi.addEventListener("click", (event) => { // eslint-disable-line
 
                 ],
                 borderWidth: 1
+                
 
             }]
         },
         options: {
+            
             scales: {
                 y: {
                     begInAtZero: true
+                    
                 }
             }
         }
@@ -188,9 +188,10 @@ top10orderLi.addEventListener("click", (event) => { // eslint-disable-line
 
     let topTenResults = relevanceOrder(resultsData); // eslint-disable-line
     let allHTML = ""
-    resultsData.forEach(topTenResults => {
-        allHTML += generatorHtml(topTenResults);
-    })
+    for (let i = 0; i < 10; i++) {
+        allHTML += generatorHtml(topTenResults[i]);
+    }
+   
     allCards.innerHTML = allHTML;
 
 });
