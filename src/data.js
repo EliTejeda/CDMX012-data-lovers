@@ -1,19 +1,23 @@
 //****************DECLARAMOS FUNCIONES PARA LAS SECCIONES******/
-//Orden alfabético 
+
+
+
+
+//ordenado alfabético 
 export const alphabeticOrder = (resultsData) => {
   return [].slice.call(resultsData).sort((character1, character2) => {
     return (character1.name < character2.name) ? -1 : 1; //algoritmo de ordenamiento
   });
 };
 
-//Orden alfabético de regreso
+//ordenado alfabético de regreso
 export const alphabeticOrderBack = (resultsData) => {
   return [].slice.call(resultsData).sort((character1, character2) => {
     return (character1.name > character2.name) ? -1 : 1; //algoritmo de ordenamiento
   });
 };
 
-// Orden hombres
+// ordenado hombres
 export const maleOrder = (resultsData) => {
   const resultsMale = []
   for (let i = 0; i < resultsData.length; i++) {   //recorrer lista de datos
@@ -25,7 +29,7 @@ export const maleOrder = (resultsData) => {
 }
 
 
-//Orden mujeres
+//ordenado mujeres
 export const femaleOrder = (resultsData) => {
   const resultsFemale = []
   for (let i = 0; i < resultsData.length; i++) {
@@ -37,7 +41,7 @@ export const femaleOrder = (resultsData) => {
 }
 
 
-//Orden especies
+//ordenado especies
 export const speciesOrder = (resultsData, specie) => {
   const resultsSpecies = []
   for (let i = 0; i < resultsData.length; i++) {
@@ -48,7 +52,9 @@ export const speciesOrder = (resultsData, specie) => {
   return resultsSpecies;
 }
 
-//Cálculo género de personajes
+
+
+// Cálculo género de personajes
 
 export const computeFemale = (resultsData) => {
   let femaleResults = []
@@ -59,11 +65,9 @@ export const computeFemale = (resultsData) => {
 
 //Cálculo del top 10 personajes que salen en la serie
 
-
 export const relevanceOrder = (resultsData) => resultsData.sort((character1, character2) => {
-  return (character2.episode.length - character1.episode.length);
-});
-
+  return (character2.episode.length - character1.episode.length);// de mayor a menor top ten
+})
 
 
 

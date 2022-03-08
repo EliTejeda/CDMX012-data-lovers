@@ -1,4 +1,3 @@
-//-----
 import data from './data/rickandmorty/rickandmorty.js';
 import generatorHtml from "./generatorHtml.js"
 import { alphabeticOrder } from "./data.js";
@@ -24,6 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
+
 // CONSTANTE MADRE --------
 let allCards = document.getElementById("allCards")
 
@@ -36,9 +37,9 @@ abcOrderLi.addEventListener("click", (event) => { // eslint-disable-line
     for (let i = 0; i < alphabeticOrderResults.length; i++) {
         allHTML += generatorHtml(alphabeticOrderResults[i]);
     }
-
     allCards.innerHTML = allHTML;
 });
+
 
 
 //------------CBA ORDEN------------
@@ -80,7 +81,7 @@ femaleOrderLi.addEventListener("click", (event) => {// eslint-disable-line
     allCards.innerHTML = allHTML;
 });
 
-//-------------BOX DE ESPECIES-----------cambiar a menú vertical 
+//-------------BOX DE ESPECIES-----------
 let speciesBox = document.getElementById("speciesBox")
 speciesBox.addEventListener("change", (event) => {// eslint-disable-line
 
@@ -91,6 +92,9 @@ speciesBox.addEventListener("change", (event) => {// eslint-disable-line
     }
     allCards.innerHTML = allHTML;
 });
+
+
+//-----BOTONES-------
 
 
 //*****BOTON INGRESO PAG */
@@ -113,7 +117,6 @@ document.getElementById("portalBackHome").onclick = function () { backSite() };
 
 
 //****BOTÓN UP ********/
-
 let buttonUp = document.getElementById("myBtn");
 
 window.onscroll = function () {
@@ -129,11 +132,12 @@ buttonUp.addEventListener('click', () => {
     document.documentElement.scrollTop = 0;
 });
 
-
-//***** SECCION DE CÁLCULOS***//
+//------- SECCION DE CÁLCULOS-------//
 
 let femalePercent = computeFemale(resultsData);
 document.getElementById("computeFemale").innerHTML = `Did you know that ${parseInt(femalePercent)}% of the characters are female?`;
+
+
 
 
 
@@ -188,6 +192,5 @@ top10orderLi.addEventListener("click", (event) => { // eslint-disable-line
         allHTML += generatorHtml(topTenResults);
     })
     allCards.innerHTML = allHTML;
-
 
 });
