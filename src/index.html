@@ -18,9 +18,9 @@
 
 <body>
   <section id="welcomePortalContainer">
-    <header style="text-align: center;">
+    <div style="text-align: center;">
       <img class="logoStyle" src="assets/logo.jpg">
-    </header>
+    </div>
 
     <figure>
       <img class="portalStyle" src="assets/portalCrop.gif" id="portalEnter" alt="Portal enter"><br><br><br>
@@ -31,10 +31,10 @@
 
   <!-----------------------------PÁGINA PRINCIPAL----------------------------------------------------->
 
-  <section id="mainPage" class="mainPage">
-    <header style="text-align: center;">
+  <main id="mainPage" class="mainPage">
+    <div style="text-align: center;">
       <img class="logoStylePrincipal" src="assets/rickymorty_bleed.png">
-    </header>
+    </div>
 
     <!----------BARRA DE MENÚ-------------------->
 
@@ -101,10 +101,10 @@
 
     <!----------------------------------------------------------CHART-------------------------------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <div style="position: relative; height:30vh; width: 50vw" class="pieChart">
-      <canvas width="200" height="200" id="topTenChart"></canvas>
+    <div class="pieChart">
+      <canvas id="topTenChart"></canvas>
     </div>
-  </section>
+  </main>
 </body>
 
 </html>
